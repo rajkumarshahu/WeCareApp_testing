@@ -58,6 +58,7 @@ const PatientsListScreen = (props) => {
 					}}
 				>
 					<Button
+						testID='PatientsListScreen.view'
 						color={Colors.primary}
 						title='View Details'
 						onPress={() => {

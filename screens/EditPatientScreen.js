@@ -151,6 +151,7 @@ const EditPatientScreen = (props) => {
 				<Card style={styles.form}>
 					<View style={styles.formControl}>
 						<TextInput
+							testID="EditPatientScreen.name"
 							label='Name'
 							keyboardType='default'
 							style={styles.input}
@@ -161,6 +162,7 @@ const EditPatientScreen = (props) => {
 					</View>
 					<View style={styles.formControl}>
 						<TextInput
+							testID="EditPatientScreen.imageUrl"
 							label='Image URL'
 							keyboardType='url'
 							multiline
@@ -173,6 +175,7 @@ const EditPatientScreen = (props) => {
 					</View>
 					<View style={styles.formControl}>
 						<TextInput
+							testID="EditPatientScreen.diagnosis"
 							label='Diagnosis'
 							keyboardType='default'
 							style={styles.input}
@@ -183,6 +186,7 @@ const EditPatientScreen = (props) => {
 					</View>
 					<View style={styles.formControl}>
 						<TextInput
+							testID="EditPatientScreen.age"
 							label='Age'
 							keyboardType='decimal-pad'
 							style={styles.input}
@@ -194,6 +198,7 @@ const EditPatientScreen = (props) => {
 
 					<View style={styles.formControl}>
 						<TextInput
+							testID="EditPatientScreen.phone"
 							label='Phone'
 							keyboardType='default'
 							style={styles.input}
@@ -205,6 +210,7 @@ const EditPatientScreen = (props) => {
 
 					<View style={styles.formControl}>
 						<TextInput
+							testID="EditPatientScreen.email"
 							label='Email'
 							keyboardType='email-address'
 							style={styles.input}
@@ -217,6 +223,7 @@ const EditPatientScreen = (props) => {
 
 					<View style={styles.formControl}>
 						<TextInput
+							testID="EditPatientScreen.address"
 							label='Address'
 							keyboardType='default'
 							style={styles.input}
@@ -228,6 +235,7 @@ const EditPatientScreen = (props) => {
 
 					<View style={styles.formControl}>
 						<TextInput
+							testID="EditPatientScreen.description"
 							label='Description'
 							keyboardType='default'
 							multiline
@@ -239,6 +247,7 @@ const EditPatientScreen = (props) => {
 					</View>
 					<View style={styles.formControl}>
 						<TextInput
+							testID="EditPatientScreen.bodyTemperature"
 							label='Body Temperature'
 							keyboardType='decimal-pad'
 							style={styles.input}
@@ -249,6 +258,7 @@ const EditPatientScreen = (props) => {
 					</View>
 					<View style={styles.formControl}>
 						<TextInput
+							testID="EditPatientScreen.pulseRate"
 							label='Pulse Rate'
 							keyboardType='decimal-pad'
 							style={styles.input}
@@ -259,6 +269,7 @@ const EditPatientScreen = (props) => {
 					</View>
 					<View style={styles.formControl}>
 						<TextInput
+							testID="EditPatientScreen.respirationRate"
 							label='Respiration Rate'
 							keyboardType='decimal-pad'
 							style={styles.input}
@@ -269,6 +280,7 @@ const EditPatientScreen = (props) => {
 					</View>
 					<View style={styles.formControl}>
 						<TextInput
+							testID="EditPatientScreen.systolicBp"
 							label='Systolic BP'
 							keyboardType='decimal-pad'
 							style={styles.input}
@@ -279,6 +291,7 @@ const EditPatientScreen = (props) => {
 					</View>
 					<View style={styles.formControl}>
 						<TextInput
+							testID="EditPatientScreen.diastolicBp"
 							label='Diastolic BP'
 							keyboardType='decimal-pad'
 							style={styles.input}
@@ -289,6 +302,7 @@ const EditPatientScreen = (props) => {
 					</View>
 					<View style={styles.formControl}>
 						<TextInput
+							testID="EditPatientScreen.oxygenSat"
 							label='Oxygen Saturation'
 							keyboardType='decimal-pad'
 							style={styles.input}
@@ -326,8 +340,9 @@ EditPatientScreen.navigationOptions = (navData) => {
 			? 'Edit Patient'
 			: 'Add Patient',
 		headerRight: () => (
-			<HeaderButtons HeaderButtonComponent={HeaderButton}>
+			<HeaderButtons testID="EditPatientScreen.submitButton" HeaderButtonComponent={HeaderButton}>
 				<Item
+					testID="EditPatientScreen.i1"
 					title='Save'
 					iconName={
 						Platform.OS === 'android' ? 'md-checkmark' : 'ios-checkmark'

@@ -37,6 +37,7 @@ const formReducer = (state, action) => {
 };
 
 const LogInSignUpScreen = (props) => {
+
 	const [isSignUp, setIsSignUp] = useState(false);
 	const [error, setError] = useState();
 	const dispatch = useDispatch();
@@ -98,8 +99,9 @@ const LogInSignUpScreen = (props) => {
 				<ScrollView>
 					<Card></Card>
 					<Card style={styles.container}>
-						<View>
+						<View testId={'email'}>
 							<TextInput
+								testID='LogInSignUpScreen.email'
 								id='email'
 								label='E-Mail'
 								keyboardType='email-address'
@@ -116,6 +118,7 @@ const LogInSignUpScreen = (props) => {
 						</View>
 						<View style={styles.formControl}>
 							<TextInput
+								testID='LogInSignUpScreen.password'
 								id='password'
 								label='Password'
 								keyboardType='default'
@@ -130,6 +133,7 @@ const LogInSignUpScreen = (props) => {
 						</View>
 						<View style={styles.buttonContainer}>
 							<Button
+								testID='LogInSignUpScreen.submitButton'
 								title={isSignUp ? 'Sign Up' : 'Login'}
 								color={Colors.primary}
 								onPress={loginSignupHandler}
@@ -137,6 +141,7 @@ const LogInSignUpScreen = (props) => {
 						</View>
 						<View style={styles.buttonContainer}>
 							<Button
+
 								title={isSignUp ? 'Switch to Login' : 'Switch to Sign Up'}
 								color={Colors.accent}
 								onPress={() => {
